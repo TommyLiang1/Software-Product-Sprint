@@ -26,3 +26,29 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function getServerTime() {
+    const responseFromServer = await fetch('/date');
+    const textFromResponse = await responseFromServer.text();
+
+    const dateContainer = document.getElementById('date-container');
+    dateContainer.innerText = textFromResponse;
+}
+
+function getIntroduction() {
+    const text = document.getElementById("text").value;
+
+    const introductionContainer = document.getElementById('introduction-container');
+    if(text != "")
+        introductionContainer.innerText = "You typed " + text;
+    else
+        introductionContainer.innerText = "";
+}
+
+async function getHelloMessage() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+
+    const helloContainer = document.getElementById('hello-container');
+    helloContainer.innerText = textFromResponse;
+}
