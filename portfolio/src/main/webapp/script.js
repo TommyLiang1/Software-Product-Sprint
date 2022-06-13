@@ -27,14 +27,6 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-async function getServerTime() {
-    const responseFromServer = await fetch('/date');
-    const textFromResponse = await responseFromServer.text();
-
-    const dateContainer = document.getElementById('date-container');
-    dateContainer.innerText = textFromResponse;
-}
-
 function getIntroduction() {
     const text = document.getElementById("text").value;
 
@@ -45,10 +37,46 @@ function getIntroduction() {
         introductionContainer.innerText = "";
 }
 
+async function getServerTime() {
+    const responseFromServer = await fetch('/date');
+    const textFromResponse = await responseFromServer.text();
+
+    const dateContainer = document.getElementById('date-container');
+    dateContainer.innerText = textFromResponse;
+}
+
 async function getHelloMessage() {
     const responseFromServer = await fetch('/hello');
     const textFromResponse = await responseFromServer.text();
 
     const helloContainer = document.getElementById('hello-container');
     helloContainer.innerText = textFromResponse;
+}
+
+async function getServerStats() {
+    const responseFromServer = await fetch('/server-stats');
+    const textFromResponse = await responseFromServer.text();
+
+    const peopleContainer = document.getElementById('people-container');
+
+    const attributes = textFromResponse.split(" ");
+    let result = "";
+    for(let i = 0; i < attributes.length-1; i++)
+    {
+        if(i%3 == 0)
+            result += attributes[i] + " is ";
+        else if(i%3 == 1)
+            result += attributes[i] + " years old.";
+        else if(i%3 == 2)
+        {
+            if(attributes[i] == "N/a")
+                result += " It has no gender.";
+            else if(attributes[i] == "female")
+                result += " She is female.";
+            else
+                result += " He is male.";
+            result += "\n";
+        }
+    }
+    peopleContainer.innerText = result;
 }

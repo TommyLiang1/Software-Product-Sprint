@@ -10,10 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
 
-    private String first_name = "Tommy";
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;");
-        response.getWriter().println("Hello " + first_name + "!");
+        response.getWriter().println("Hello Tommy!");
     }
 }
