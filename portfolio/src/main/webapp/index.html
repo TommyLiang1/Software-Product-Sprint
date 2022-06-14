@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+</head>
+
+<body>
+    <nav id="header">
+        <a href="./index.html" class="nav-item">Home</a>
+        <a href="./src/about.html" class="nav-item">About Me</a>
+        <a href="./src/project.html" class="nav-item">Projects</a>
+        <a href="./src/test.html" class="nav-item">Current Activities</a>
+        <a href="./src/contact.html" class="nav-item">Contact Me</a>
+    </nav>
+    <h1>My Portfolio</h1>
+    <p>This is my portfolio.</p>
+    <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+    <p>Click here to get a random message:</p>
+    <button onclick="addRandomGreeting()">Hello</button>
+    <div id="greeting-container"></div>
+</body>
+
 </html>
