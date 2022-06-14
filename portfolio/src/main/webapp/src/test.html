@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What I'm Currently Doing</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+<body>
+    <nav id="header">
+        <a href="../index.html" class="nav-item">Home</a>
+        <a href="./about.html" class="nav-item">About Me</a>
+        <a href="./project.html" class="nav-item">Projects</a>
+        <a href="./test.html" class="nav-item">Current Activities</a>
+        <a href="./contact.html" class="nav-item">Contact Me</a>
+    </nav>
+    <div id="testing">
+        <p>Click <button onclick="getServerTime()">here</button> to get the date.</p>
+        <div id="date-container"></div>
+        <br />
+        <input id="text" type="text" placeholder="Type something here">
+        <button onclick="getIntroduction()">Submit</button>
+        <div id="introduction-container"></div>
+        <br />
+        <p>Click <button onclick="getHelloMessage()">here</button> to display whatever's in the /hello extension.</p>
+        <div id="hello-container"></div>
+
+        <button onclick="getServerStats()">Test</button>
+        <div id="people-container">
+        </div>
+    </div>
+</body>
+</html>

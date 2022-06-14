@@ -1,27 +1,38 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/* Header */
+#header {
+    text-align: center;
+    
 }
 
-#greeting-container {
-  margin-top: 20px;
+.nav-item {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: lightblue;
+    border-radius: 20px;
 }
 
-a {
-    font: black;
-    display: inline-block;
-    text-decoration: none;
+/* Index */
+
+/* About Me */
+#about-me {
+    float: left;
+    position: relative;
+    left: 50%;
 }
 
-a:visited { 
-    text-decoration: none;
-    color: black;
+#intro {
+    float: left;
+    position: relative;
+    left: -50%;
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
+/* Projects */
+#contents {
+    margin: auto;
+    text-align: center;
 }
 
 #my-projects {
@@ -29,6 +40,8 @@ a:visited {
     grid: flex;
     grid-template-columns: repeat(3, 300px);
     grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .project {
@@ -44,3 +57,52 @@ a:visited {
     width: 250px;
     height: auto;
 }
+
+/* Test */
+#testing {
+    text-align: center;
+}
+
+
+#greeting-container {
+  margin-top: 20px;
+}
+
+/* Contact Me */
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 100px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.logo:hover {
+    animation: rotation 3s infinite linear;
+}
+
+#contacts {
+    text-align: center;
+    margin: auto;
+}
+
+/* All */
+a {
+    font: black;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:visited { 
+    text-decoration: none;
+    color: black;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

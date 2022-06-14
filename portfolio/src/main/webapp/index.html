@@ -9,61 +9,19 @@
 </head>
 
 <body>
-    <div id="content">
-        <h1>Tommy Liang Portfolio</h1>
-        <h2>Junior at CUNY-Hunter College pursuing a Bachelors in Computer Science</h2>
-        <h2>2024 Daedalus Cohort</h2>
-        <p>I'm Chinese American and I'm of Taisan (Cantonese) descent but I was born and raised in New York City.</p>
-        <p>My personality type is ISTP (Introvert, Observant, Thinking, Prospecting) and I'm very easygoing and easy to
-            communicate with.</p>
-        <div>
-            <h3>Projects that I worked on</h3>
-            <div id="my-projects">
-                <a class="project" href="https://github.com/TommyLiang1/Code-Break-Minigame" target="_blank">
-                    <h2>Codebreak Minigame</h2>
-                    <img class="description" src="Images/CodebreakerMinigame.JPG" />
-                </a>
-                <a class="project" href="https://github.com/TommyLiang1/Cooking-Web-Page" target="_blank">
-                    <h2>Cooking Web Page</h2>
-                    <img class="description" src="Images/CookingWebPage.JPG" />
-                </a>
-                <a class="project" href="https://github.com/TommyLiang1/codefest" target="_blank">
-                    <h2>Messaging App</h2>
-                    <img class="description" src="Images/MessagingApp.gif" />
-                </a>
-            </div>
-        </div>
-        <br />
-        <div>
-            <p>Click <button onclick="getServerTime()">here</button> to get the date.</p>
-            <div id="date-container"></div>
-            <br />
-            <input id="text" type="text" placeholder="Type something here">
-            <button onclick="getIntroduction()">Submit</button>
-            <div id="introduction-container"></div>
-            <br />
-            <p>Click <button onclick="getHelloMessage()">here</button> to display whatever's in the /hello extension.</p>
-            <div id="hello-container"></div>
-
-            <button onclick="getServerStats()">Test</button>
-            <div id="people-container">
-            </div>
-        </div>
-        <br />
-        <div>
-            <h3>Links to my socials: </h3>
-            <a href="https://www.linkedin.com/in/tommy-liang-6a371a18b/" target="_blank"><img class="logo"
-                    src="Images/LinkedinLogo.png" /></a>
-            <a href="https://github.com/TommyLiang1" target="_blank"><img class="logo"
-                    src="Images/GithubLogo.png" /></a>
-        </div>
-        <h1>My Portfolio</h1>
-        <p>This is my portfolio.</p>
-        <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-        <p>Click here to get a random message:</p>
-        <button onclick="addRandomGreeting()">Hello</button>
-        <div id="greeting-container"></div>
-    </div>
+    <nav id="header">
+        <a href="./index.html" class="nav-item">Home</a>
+        <a href="./src/about.html" class="nav-item">About Me</a>
+        <a href="./src/project.html" class="nav-item">Projects</a>
+        <a href="./src/test.html" class="nav-item">Current Activities</a>
+        <a href="./src/contact.html" class="nav-item">Contact Me</a>
+    </nav>
+    <h1>My Portfolio</h1>
+    <p>This is my portfolio.</p>
+    <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+    <p>Click here to get a random message:</p>
+    <button onclick="addRandomGreeting()">Hello</button>
+    <div id="greeting-container"></div>
 </body>
 
 </html>
